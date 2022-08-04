@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel='stylesheet' href='/static/smth.css'/>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+<div><img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="75"></div>
+</head>
+<body>
+<center><h1 style="color:#00FFFF
+;" style="font-family:verdana">Welcome To FitBit!</h1></center>
+
+    <form method="POST" action="/">
+        <!-- Heading --><center>
+        <h4>
+        Log in to your account
+        </h4>
+
+        <!-- Subheading -->
+        <p >
+        fill up your info to sign in.
+        </p>
+
+        <!-- Email -->
+        <div>
+            <label>Email address</label>
+            <div>
+                <input type="email"  name="email" id="emailStr" required>
+            </div>
+        </div><br>
+
+        <!-- Password -->
+        <div>
+            <label>Password</label>
+            <div class="input-group">
+                <input type="password"  name="password" minlength="6">
+            </div>
+        </div><br>
+        
+        <!-- Button -->
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
+    <br>
+    <a href="{{url_for('signup')}}">signup</a>
+</center>
+
+
+</form>
+
+
+
+
+</body>
+</html>
