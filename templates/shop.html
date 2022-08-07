@@ -6,7 +6,7 @@
 <header id="header">
   
   <script src="navbar.js"></script>
-  <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="75">
+  <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
   <div><center><h1 style="color:black
 ;">FitBit's Shop</h1></center></div>  
     <ul>
@@ -14,6 +14,7 @@
       <li><a href="{{url_for('shop')}}">Shop</a></li>
       <li><a href="{{url_for('features')}}">Features</a></li>
       <li><a href="{{url_for('abouts')}}">Guide</a></li>
+    <li><a href="{{url_for('cart')}}">Cart</a></li>
     </ul>
 </header>
 <body>
@@ -23,7 +24,9 @@
 
 <h1 style='color:black;'> Welcome to our shop:</h1>
 <center><h2>Our top picks <h1>⬇</h1></h2></center>
-<div><img align='left' src="/static/charge3.webp" width='150' height='150' >
+<div><a href="{{url_for('cart')}}"><input align='left' type="image" width='150' height='150' src="/static/charge3.webp" name="charge3" width="100" height="48"/></a></div>
+
+
     <br><br><br><br>
 
 <h2 align='left'>   The amazing charge 3</h2>
@@ -32,7 +35,17 @@
 
 
 
-<div><img align="right" src="/static/charge2.png" width="150" height="150">
+
+
+
+
+
+
+
+
+
+
+<div><a href="{{url_for('cart')}}"><input align='right' type="image" width='150' height='150' src="/static/charge2.png" name="charge2" width="100" height="48"/></a>
 <br><br><br><br>
 <h2 align='right'>The newly updated Charge 2</h3>
 <h2 align='right'>249.99 NIS </h2></div>
@@ -40,7 +53,15 @@
 
 
 
-<div><img align='left' src='/static/versa1.jpg' width='150' height='150'>
+
+
+
+
+
+
+
+
+<div><a href="{{url_for('cart')}}"><input align='left' type="image" width='150' height='150' src="/static/versa1.jpg" name="versa1" width="100" height="48"/></a>
     <br><br><br><br>
     <h2 align='left'> The versa 1</h2>
     <h2 align='left'>299.99 NIS</h2></div>
@@ -48,27 +69,66 @@
 
 
 
-<div><img align='right' src='/static/versa3.png' width=150 height='150'>
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="{{url_for('cart')}}"><input align='right' type="image" width='150' height='150' src="/static/versa3.png" name="versa3" width="100" height="48"/></a>
      <br><br>
    <br><br>
 <h2 align='right'> The one and only versa 3</h2>
 <h2 align='right'>399.99 NIS</h2></div>
 
 
-<div><img align='left' src='/static/vivofit4.jpg' width=150 height='150'>
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="{{url_for('cart')}}"><input align='left' type="image" width='150' height='150' src="/static/vivofit4.jpg" name="vivofit4" width="100" height="48"/></a>
      <br><br>
    <br><br>
 <h2 align='left'> The exquisite vivofit4</h2>
 <h2 align='left'>349.99 NIS</h2></div>
 
 
-<div><img align='right' src='/static/inspire2.jpg' width=150 height='150'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><a href="{{url_for('cart')}}"><input align='right' type="image" width='150' height='150' src="/static/inspire2.jpg" name="inspire2" width="100" height="48"/></a>
      <br><br>
    <br><br>
 <h2 align='right'> The special inspire2</h2>
 <h2 align='right'>499.99 NIS</h2></div>
 <br><br><br><br>
-<h1 align='middle' style='color:black;'> DISCLAIMER these are the watches that you will find in our shops<br>
+<h1 align='middle' style='color:black;'> DISCLAIMER these are the watches that you will find in our shops if you wish to buy any of them via delivery call +1-202-555-0110 OR wait for the lazy developer to finish the cart
+<br>
 we hope you had an amazing experience with us</h1>
 
 

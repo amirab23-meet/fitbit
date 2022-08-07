@@ -86,8 +86,9 @@ def shop():
 def abouts():
     return render_template("abouts.html")
 
-
-
+@app.route('/cart')
+def cart():
+    return render_template("cart.html")
 
 
 if __name__ == '__main__':
