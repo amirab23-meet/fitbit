@@ -46,9 +46,12 @@ def signup():
         login_session['email']= request.form['email']
         login_session['full_name']= request.form['full_name']
         login_session['username']= request.form['username']
+        login_session['location']= request.form['location']
+        login_session['password']= request.form['password']
+
         # try:
         login_session['user'] = auth.create_user_with_email_and_password(login_session["email"], request.form['password'])
-        user= {"email": request.form['email'],"full_name": request.form['full_name'],"username": request.form['username'],}
+        user= {"email": request.form['email'],"full_name": request.form['full_name'],"username": request.form['username'],"location": request.form['location'],"password": request.form['password'] }
         user = db.child("Users").child(login_session['user']['localId']).set(user)
         return redirect(url_for('design'))
         # except:
@@ -89,6 +92,26 @@ def abouts():
 @app.route('/cart')
 def cart():
     return render_template("cart.html")
+
+@app.route('/ship')
+def ship():
+    
+
+   
+        
+    full_name = db.child("Users").child(login_session['user']['localId']).get().val()['full_name']
+    location = db.child("Users").child(login_session['user']['localId']).get().val()['location']
+    
+    return render_template("ship.html" , location=location , full_name = full_name ,)
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

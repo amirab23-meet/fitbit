@@ -8,7 +8,8 @@
   <script src="navbar.js"></script>
   <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
   <div><center><h1 style="color:black
-;">Your shopping Cart</h1></center></div>  
+;">Your shopping Cart</h1></center></div>
+  
     <ul>
       <li><a href="{{url_for('design')}}">Home</a></li>
       <li><a href="{{url_for('shop')}}">Shop</a></li>
@@ -20,26 +21,143 @@
 <body>
 <br><br><br><br>
 
-<h1>currently still in the making</h1>
+
 
 <br><br><br>
+<div class="Cart-Container"></div>
+
+<div class="Cart-Items">
+ <div class="image-box">
+ <img src="static/charge3.webp" width='150' height='150'>
+ </div>
+ <div class="about">
+ <h1 class="title">charge 3</h1>
+ <h3 class="subtitle">349.99 NIS</h3>
+ <img src="static/veg.jpg" width="20" height="20">
+ </div>
+ <div class="counter"></div>
+ <div class="prices"></div>
+ </div>
+
+<br><br><br>
+<div class="Cart-Items">
+ <div class="image-box">
+ <img src="static/charge2.png" width='150' height='150'>
+ </div>
+ <div class="about">
+ <h1 class="title">charge 2</h1>
+ <h3 class="subtitle">249.99 NIS</h3>
+ <img src="static/veg.jpg" width="20" height="20">
+ </div>
+ <div class="counter"></div>
+ <div class="prices"></div>
+ </div>
 
 
 
-<div><center><h2>If you wish to continue shopping Click down</h2>
+<br><br><br>
+<div class="Cart-Items">
+ <div class="image-box">
+ <img src="static/versa1.jpg" width='150' height='150'>
+ </div>
+ <div class="about">
+ <h1 class="title">versa 1</h1>
+ <h3 class="subtitle">299.99 NIS</h3>
+ <img src="static/veg.jpg" width="20" height="20">
+ </div>
+ <div class="counter"></div>
+ <div class="prices"></div>
+ </div>
 
-<h1>⬇</h1>
-<a href="{{url_for('shop')}}"><input type="image" width='150' height='150' src="/static/cart.png" name="shop" width="100" height="48"/></a>
-</center></div>
+
+
+<br><br><br>
+<div class="Cart-Items">
+ <div class="image-box">
+ <img src="static/versa3.png" width='150' height='150'>
+ </div>
+ <div class="about">
+ <h1 class="title">versa 3</h1>
+ <h3 class="subtitle">399.99 NIS</h3>
+ <img src="static/veg.jpg" width="20" height="20">
+ </div>
+ <div class="counter"></div>
+ <div class="prices"></div>
+ </div>
 
 
 
+<br><br><br>
+<div class="Cart-Items">
+ <div class="image-box">
+ <img src="static/vivofit4.jpg" width='150' height='150'>
+ </div>
+ <div class="about">
+ <h1 class="title">vivofit 4</h1>
+ <h3 class="subtitle">349.99 NIS</h3>
+ <img src="static/veg.jpg" width="20" height="20">
+ </div>
+ <div class="counter"></div>
+ <div class="prices"></div>
+ </div>
+
+
+
+<br><br><br>
+<div class="Cart-Items">
+ <div class="image-box">
+ <img src="static/inspire2.jpg" width='150' height='150'>
+ </div>
+ <div class="about">
+ <h1 class="title">inspire 2</h1>
+ <h3 class="subtitle">499.99 NIS</h3>
+ <img src="static/veg.jpg" width="20" height="20">
+ </div>
+ <div class="counter"></div>
+ <div class="prices"></div>
+ </div>
+ 
+<br><br><br><br>
+
+<hr> 
+ <center><div class=”checkout”>
+ <div class=”total”>
+ <div>
+ <div class=”Subtotal”>Sub-Total</div>
+ <div class=”items”>1 item</div>
+ </div>
+ <div class=”total-amount”>249.99 NIS</div>
+ </div>
+ <form action="/ship">
+ <label for="cars">Choose a payment method:</label>
+  <select name="pay" id="pays">
+    <option value="cash">Cash</option>
+    <option value="Card">FitBit Gift Card</option>
+   
+   
+    
+  </select>
+  <br> <br><input type="submit" value="Checkout">
+</form>
+ </div></center>
+<br>
+<center> <h4>If you chose gift card as a payment method include the details below </h4>
+
+
+ <div>
+            <label>Gift card</label>
+            <div>
+                <input name="card" >
+                
+            </div>
+        </div><br>
+
+</center>
     
 
+<center><a href="{{url_for('shop')}}"> <h3>Continue shopping</h3></a></center>
 
-
-
-
+<br><br><BR>
 
 
 

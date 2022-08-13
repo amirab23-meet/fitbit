@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel='stylesheet' href='static/smth.css'/>
+  <title>Shipments</title>
+<header id="header">
+  
+  <script src="navbar.js"></script>
+  <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
+  <div><center><h1 style="color:black
+;">Your order</h1></center></div>  
+    <ul>
+      <li><a href="{{url_for('design')}}">Home</a></li>
+      <li><a href="{{url_for('shop')}}">Shop</a></li>
+      <li><a href="{{url_for('features')}}">Features</a></li>
+      <li><a href="{{url_for('abouts')}}">Guide</a></li>
+          <li><a href="{{url_for('cart')}}">Cart</a></li>
+    </ul>
+</header>
+<!-- /header -->
+
+<main>
+</main>
+ <div><h1> Congrats {{full_name}}!</h1></head></div> 
+ <br>
+ <center><h2 style="color:black
+;">Your order is currently being delivered to</h2> <h1 style="color:white">{{location}}
+  <br>
+  {{card}}
+<br></h1><h2 style="color:black"> Thank you for shopping with us</h2></center>
