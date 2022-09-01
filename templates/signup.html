@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="x-icon" href="/static/lock.webp">
     <link rel='stylesheet' type='text/css' href='static/smth.css'/>
+    <link rel='stylesheet' type='text/css' href='static/sign.css'/>
     <meta charset="UTF-8">
-    <title>Signup</title>
-<img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="75">
+    <title>Signup</title>   
+    <header id="header">    
+  
+  <script src="navbar.js"></script>
+  <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
+  <div><center><h1 align="left" style="color:black
+;">Sign up &nbsp; &nbsp; &nbsp; </h1></center></div>  
+<ul>
+      
+          <li><a href="{{url_for('signin')}}">Got an account?</a></li>
+    </ul>
+</header>
 
-<center><h1 style="color:#00FFFF
-;" style="font-family:verdana">Welcome To FitBit!</h1></center>    
+<br><BR><BR><BR>
+<center><h1 style="color:darkgray;
+;" style="font-family:verdana">Welcome To FitBit!    </h1></center>    
 </head>
 <body>
-
 
 
     <center>
@@ -29,7 +41,7 @@
         <div>
             <label>Email address</label>
             <div>
-                <input type="email"  name="email" id="emailStr" required>
+                <input type="email"  name="email" id="emailStr" required placeholder="email@example.com">
             </div>
         </div><br>
 
@@ -37,28 +49,40 @@
         <div>
             <label>Password</label>
             <div class="input-group">
-                <input type="password"  name="password" minlength="6">
+                <input type="password"  name="password" minlength="6" placeholder="Password">
             </div>
         </div><br>
         <div>
             <label>Full Name</label>
             <div>
-                <input  name="full_name" required>
+                <input  name="full_name" required placeholder="ie. Joe Anderson">
             </div><br>
         </div>
         <div>
             <label>Username</label>
             <div>
-                <input   name="username" required>
+                <input   name="username" required placeholder="ie. joemama12">
             </div>
         </div><br>
 
         <div>
             <label>Address</label>
             <div>
-                <input   name="location" required>
+                <input   name="location" required placeholder="ie. Main st12">
             </div>
         </div><br>
+
+        <div>
+            <label>FitBit Gift card number</label>
+            <div>
+                <input type="password"  name="card" placeholder="ie. 3yd74k84w9m47fb4" maxlength="16" >
+                
+            </div>
+            <h3> &nbsp; &nbsp; &nbsp;  for a nintendo <a href="https://www.giftcards.com/search-results?q=nintendo" style="color:greenyellow;">gift card</a> &nbsp; <== &nbsp; If you don't have a giftcard &nbsp; ==> &nbsp; for a google play <a href="https://www.giftcards.com/google-play-gift-card?experience_type=virtual" style="color:greenyellow;">gift card</a> </h3>
+            
+        </div><br>
+
+
         
         <!-- Button -->
         <div>
@@ -68,6 +92,14 @@
 
     <font color="red">{{ error }}</font>
     <br>
-    <a href="{{url_for('signin')}}">sign in</a>
+    
 </center></body>
 </html>
+
+
+
+
+
+
+
+

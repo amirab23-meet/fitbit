@@ -362,3 +362,11 @@ hr{
  font-weight: 600;
  color: #202020;
 }
+
+
+body {
+ background-image: url("notsun.gif");
+ background-color: #cccccc;
+ background-attachment: fixed;
+  background-size: cover;
+}

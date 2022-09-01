@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="x-icon" href="/static/cart.png">
     <link rel='stylesheet' href='static/smth.css'/>
   <title>Cart</title>
 <header id="header">
@@ -8,7 +9,7 @@
   <script src="navbar.js"></script>
   <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
   <div><center><h1 style="color:black
-;">Your shopping Cart</h1></center></div>
+;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Your shopping Cart</h1></center></div>
   
     <ul>
       <li><a href="{{url_for('design')}}">Home</a></li>
@@ -16,6 +17,11 @@
       <li><a href="{{url_for('features')}}">Features</a></li>
       <li><a href="{{url_for('abouts')}}">Guide</a></li>
       <li><a href="{{url_for('cart')}}">Cart</a></li>
+      <li><a href="{{url_for('signin')}}" onclick="return confirm('Are you sure you want to Sign out');">sign out</a>
+      </li>
+
+
+
     </ul>
 </header>
 <body>
@@ -129,35 +135,36 @@
  <div class=”total-amount”>249.99 NIS</div>
  </div>
  <form action="/ship">
- <label for="cars">Choose a payment method:</label>
-  <select name="pay" id="pays">
-    <option value="cash">Cash</option>
-    <option value="Card">FitBit Gift Card</option>
-   
-   
-    
-  </select>
-  <br> <br><input type="submit" value="Checkout">
+ 
+
+
+
+  <br> <br><input type="submit" value="Checkout"  >
+
+
+
 </form>
  </div></center>
 <br>
-<center> <h4>If you chose gift card as a payment method include the details below </h4>
 
-
- <div>
-            <label>Gift card</label>
-            <div>
-                <input name="card" >
-                
-            </div>
-        </div><br>
-
-</center>
     
 
-<center><a href="{{url_for('shop')}}"> <h3>Continue shopping</h3></a></center>
+<center><a href="{{url_for('shop')}}"> <h3 style="color: greenyellow;">Continue shopping</h3></a></center>
 
 <br><br><BR>
+
+
+
+
+</div>
+
+<h3>{{watch[value]}}</h3>
+
+  
+
+
+  
+
 
 
 

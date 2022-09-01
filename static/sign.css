@@ -1,12 +1,7 @@
 
-body {background-color: red;
-  ba
-  background-image: url('/static/fitbitbg.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+body {
+ background-image: url("idk.gif");
+ background-color: #cccccc;
+ background-attachment: fixed;
   background-size: cover;
 }
-
-
-
-

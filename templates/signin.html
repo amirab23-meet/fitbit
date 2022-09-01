@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<link rel="icon" type="x-icon" href="/static/lock.webp">
 <link rel='stylesheet' href='/static/smth.css'/>
+<link rel='stylesheet' href='/static/sign.css'/>
+
     <meta charset="UTF-8">
     <title>Signin</title>
-<div><img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="75"></div>
+    <header id="header">
+  
+  <script src="navbar.js"></script>
+  <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
+  <div><center><h1 align="middle" style="color:black
+;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   Sign in</h1></center></div>  
+<ul>
+      <li><a href="{{url_for('signin')}}">Home</a></li>
+      <li><a href="{{url_for('signin')}}">Shop</a></li>
+      <li><a href="{{url_for('signin')}}">Features</a></li>
+      <li><a href="{{url_for('signin')}}">Guide</a></li>
+          <li><a href="{{url_for('signin')}}">Cart</a></li>
+    </ul>
+</header>
+
+
 </head>
 <body>
-<center><h1 style="color:#00FFFF
+    <br><br><br><br>
+<center><h1 style="color:darkgray;
 ;" style="font-family:verdana">Welcome To FitBit!</h1></center>
 
     <form method="POST" action="/">
@@ -26,7 +44,8 @@
         <div>
             <label>Email address</label>
             <div>
-                <input type="email"  name="email" id="emailStr" required>
+                <input type="email"  name="email" id="emailStr" required placeholder="email@example.com">
+
             </div>
         </div><br>
 
@@ -34,7 +53,7 @@
         <div>
             <label>Password</label>
             <div class="input-group">
-                <input type="password"  name="password" minlength="6">
+                <input type="password"  name="password" minlength="6" placeholder="Password">
             </div>
         </div><br>
         
@@ -43,8 +62,8 @@
             <input type="submit"/>
         </div>
     </form>
-    <br>
-    <a href="{{url_for('signup')}}">signup</a>
+    
+    <a href="{{url_for('signup')}}"><h3 style="color:darkgray;"> signup</h3></a>
 </center>
 
 

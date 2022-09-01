@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="x-icon" href="/static/shop.png">
   <link rel='stylesheet' href='static/smth.css'/>
   <title>Shop</title>
 <header id="header">
@@ -8,136 +9,352 @@
   <script src="navbar.js"></script>
   <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
   <div><center><h1 style="color:black
-;">FitBit's Shop</h1></center></div>  
+;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  FitBit's Shop</h1></center></div>  
     <ul>
       <li><a href="{{url_for('design')}}">Home</a></li>
       <li><a href="{{url_for('shop')}}">Shop</a></li>
       <li><a href="{{url_for('features')}}">Features</a></li>
       <li><a href="{{url_for('abouts')}}">Guide</a></li>
-    <li><a href="{{url_for('cart')}}">Cart</a></li>
+      <li><a href="{{url_for('cart')}}">Cart</a></li>
+      <li><a href="{{url_for('signin')}}" onclick="return confirm('Are you sure you want to Sign out');">sign out</a></li>    
     </ul>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+</style>
+
+
+
 </header>
 <body>
 <br><br><br><br>
 
 
 
-<h1 style='color:black;'> Welcome to our shop:</h1>
+<h1 align="left" style='color:darkgray;'> Welcome to our shop:</h1>
 <center><h2>Our top picks <h1>⬇</h1></h2></center>
-<div><a href="https://www.productreview.com.au/listings/fitbit-charge-3"><input align='left' type="image" width='150' height='150' src="/static/charge3.webp" name="charge3" width="100" height="48"/></a>
-
-
-</div>
-
-
-    <br><br><br><br>
-
-<h2 align='left'>   The amazing charge 3</h2>
-<h2 align='left'> 349.99 NIS</h2>
-<a href="{{url_for('cart')}}"><input align='left' type="image" width='110' height='25' src="/static/cartbut.png" name="charge3" width="30" height="10"/></a>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div><a href="https://www.productreview.com.au/listings/fitbit-charge-2"><input align='right' type="image" width='150' height='150' src="/static/charge2.png" name="charge2" width="100" height="48"/></a>
-<br><br><br><br>
-<h2 align='right'>The newly updated Charge 2</h3>
-<h2 align='right'>249.99 NIS </h2>
-<a href="{{url_for('cart')}}"><input align='right' type="image" width='110' height='25' src="/static/cartbut.png" name="charge2" width="30" height="10"/></a></div>
-
-
-
-
-
-
-
-
-
-<div><a href="https://www.productreview.com.au/listings/fitbit-versa"><input align='left' type="image" width='150' height='150' src="/static/versa1.jpg" name="versa1" width="100" height="48"/></a>
-    <br><br><br><br>
-    <h2 align='left'> The versa 1</h2>
-    <h2 align='left'>299.99 NIS</h2>
-<a href="{{url_for('cart')}}"><input align='left' type="image" width='110' height='25' src="/static/cartbut.png" name="versa1" width="30" height="10"/></a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div><a href="https://www.productreview.com.au/listings/fitbit-versa-3"><input align='right' type="image" width='150' height='150' src="/static/versa3.png" name="versa3" width="100" height="48"/></a>
-     <br><br>
-   <br><br>
-<h2 align='right'> The one and only versa 3</h2>
-<h2 align='right'>399.99 NIS</h2>
-<a href="{{url_for('cart')}}"><input align='right' type="image" width='110' height='25' src="/static/cartbut.png" name="versa3" width="30" height="10"/></a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div><a href="https://www.productreview.com.au/listings/garmin-vivofit-4"><input align='left' type="image" width='150' height='150' src="/static/vivofit4.jpg" name="vivofit4" width="100" height="48"/></a>
-     <br><br>
-   <br><br>
-<h2 align='left'> The exquisite vivofit4</h2>
-<h2 align='left'>349.99 NIS</h2>
-<a href="{{url_for('cart')}}"><input align='left' type="image" width='110' height='25' src="/static/cartbut.png" name="vivofit4" width="30" height="10"/></a></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div><a href="https://www.productreview.com.au/listings/fitbit-inspire-2"><input align='right' type="image" width='150' height='150' src="/static/inspire2.jpg" name="inspire2" width="100" height="48"/></a>
-     <br><br>
-   <br><br>
-<h2 align='right'> The special inspire2</h2>
-<h2 align='right'>499.99 NIS</h2>
-<a href="{{url_for('cart')}}"><input align='right' type="image" width='110' height='25' src="/static/cartbut.png" name="inspire2" width="30" height="10"/></a></div>
-
-<br><br><br><br>
-<h1 align='middle' style='color:black;'> DISCLAIMER these are the watches that you will find in our shops if you wish to buy any of them via delivery call +1-202-555-0110 OR wait for the lazy developer to finish the cart
 <br>
-we hope you had an amazing experience with us</h1>
+
+<!-- First ROW -->
+
+
+<div class="row">
+  <div class="column">
+
+
+   <center><a href="https://www.productreview.com.au/listings/fitbit-charge-5"><input type="image" width='150' height='150' src="/static/charge5.webp"  name="charge5" width="100" height="48"/></a>
+
+
+
+<h2 >The amazing Charge 5  </h2>
+<h2 >599.99 NIS </h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input onclick="value();" type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart" >
+  <script type="text/javascript">
+    let num="1";
+  </script>
+</form>
+
+</center></div>
+  
+<h1>&nbsp; &nbsp; </h1>
+
+  
+
+</div>
+
+
+<br><br><br>
+
+<!-- Second Row-->
+
+<div class="row">
+  <h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; </h1>
+<div class="column">
+
+    <a href="https://www.productreview.com.au/listings/fitbit-versa-3"><input type="image" width='150' height='150' src="/static/versa3.jpg" name="versa3" width="100" height="48"/></a>
+   <div><h2 > Versa 3</h2>
+<h2 >399.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+  </div></div>
+  
+  <div class="column">
+
+<a href="https://www.productreview.com.au/listings/fitbit-charge-3"><input  type="image" width='150' height='150' src="/static/charge3.webp" name="charge3" width="100" height="48"/></a>
+
+
+
+<div>
+<h2 >  Charge 3</h2>
+<h2 > 349.99 NIS </h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+ </div>
+  </div>
+
+<!-- <h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; </h1> -->
+
+  <div class="column">
+
+    <a href="https://www.productreview.com.au/listings/fitbit-versa"><input  type="image" width='150' height='150' src="/static/versa1.jpg" name="versa1" width="100" height="48"/></a>
+   
+    <h2 >Versa 1</h2>
+    <h2 >299.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form></div>
+  <h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </h1>
+  
+  </div>
+  
+
+ 
+
+  </div>
+  
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<!-- Third Row -->
+
+
+<div class="row">
+    <h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   </h1>
+  <div class="column">
+
+    <a href="https://www.productreview.com.au/listings/garmin-vivofit-4"><input type="image" width='150' height='150' src="/static/vivofit4.jpg" name="vivofit4" width="100" height="48"/></a>
+      <h2 > Vivofit4</h2>
+      <h2 >349.99 NIS</h2>
+      <form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+  </div>
+
+
+
+  <div class="column">
+
+    <a href="https://www.productreview.com.au/listings/fitbit-inspire-2"><input  type="image" width='150' height='150' src="/static/inspire2.jpg" name="inspire2" width="100" height="48"/></a>
+    <h2 >Inspire2</h2>
+<h2 >499.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+  </div>
+  
+<div class="column">
+
+    <a href="https://www.productreview.com.au/listings/xiaomi-mi-band-3"><input  type="image" width='150' height='150' src="/static/fitbitmi.jpg" name="mi3" width="100" height="48"/></a>
+    <h2 >FitBit Mi 3</h2>
+<h2 >249.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+  </div>
+  
+
+<div class="column">
+
+    <a href="https://www.productreview.com.au/listings/xiaomi-mi-smart-band-4c"><input  type="image" width='150' height='150' src="/static/mi4.webp" name="mi4" width="100" height="48"/></a>
+    <h2 >FitBit Mi 4</h2>
+<h2 >399.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+
+
+<div class="column">
+
+    <a href="https://www.productreview.com.au/listings/fitbit-inspire-2"><input  type="image" width='150' height='150' src="/static/pinspire2.webp" name="pinspire2" width="100" height="48"/></a>
+    <h2 >Pink Inspire 3</h2>
+<h2 >549.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+
+  </div>
+<br><br>
+
+<!-- Fourth ROW -->
+
+
+<div class="row">
+   <h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   </h1>
+  <div class="column">
+
+   <a href="https://www.productreview.com.au/listings/garmin-forerunner-235"><input  type="image" width='150' height='150' src="/static/forerunner23.webp" name="fore23" width="100" height="48"/></a>
+    <h2 >ForeRunner 23</h2>
+<h2 >449.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+
+
+
+  <div class="column">
+
+    <a href="https://www.productreview.com.au/listings/garmin-vivofit-3"><input  type="image" width='150' height='150' src="/static/vivo3.webp" name="vivo3" width="100" height="48"/></a>
+    <h2 >VivoFit 3</h2>
+<h2 >149.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+
+  </div>
+  
+<div class="column">
+
+    <a href="https://www.productreview.com.au/listings/garmin-vivosmart-hr"><input  type="image" width='150' height='150' src="/static/vivos.webp" name="vivos" width="100" height="48"/></a>
+    <h2 >VivoSmart 99</h2>
+<h2 >249.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+ 
+<h1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   </h1>
+
+  </div>
+<br><br>
+  
+
+<!-- Fifth ROW -->
+
+
+<div class="row">
+  <div class="column">
+
+   <center> <a href="https://www.productreview.com.au/listings/garmin-venu-2-series"><input  type="image" width='150' height='150' src="/static/venue.webp" name="venue" width="100" height="48"/></a>
+    <h2 >Luxury Venue 2</h2>
+<h2 >699.99 NIS</h2>
+<form  action="{{url_for('cart')}}">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="Add to Cart">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+</center>
+  </div>
+<h1>&nbsp; &nbsp; </h1>
+</div>
+
+
+
+
+
+
+
+
+<br><br><br><br>
+ <h1 align="middle" style="color:#0A043C;"> notice how the placement of the watches resembles our logo</h1> <h1 align="middle" style="color:gray;"> As you can see we offer a variety of watches to choose from <h2 style="color: black;">if you wish to look much cooler buy a FitBit from here and have it delivered to your doorstep in less than 7 days free shipping
+</h2>
+<h1 align='middle' style='color:darkgray;'>we hope you had an amazing experience with us</h1>
 
 
 

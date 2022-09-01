@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="x-icon" href="/static/checkout.webp">
   <link rel='stylesheet' href='static/smth.css'/>
   <title>Shipments</title>
 <header id="header">
@@ -8,13 +9,14 @@
   <script src="navbar.js"></script>
   <img class="site-logo" id="logo" src="/static/logo.jpg" width="150" height="70">
   <div><center><h1 style="color:black
-;">Your order</h1></center></div>  
+;">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Your order</h1></center></div>  
     <ul>
       <li><a href="{{url_for('design')}}">Home</a></li>
       <li><a href="{{url_for('shop')}}">Shop</a></li>
       <li><a href="{{url_for('features')}}">Features</a></li>
       <li><a href="{{url_for('abouts')}}">Guide</a></li>
-          <li><a href="{{url_for('cart')}}">Cart</a></li>
+      <li><a href="{{url_for('cart')}}">Cart</a></li>
+      <li><a href="{{url_for('signin')}}" onclick="return confirm('Are you sure you want to Sign out');">sign out</a></li>    
     </ul>
 </header>
 <!-- /header -->
@@ -24,7 +26,48 @@
  <div><h1> Congrats {{full_name}}!</h1></head></div> 
  <br>
  <center><h2 style="color:black
-;">Your order is currently being delivered to</h2> <h1 style="color:white">{{location}}
+;">Your order is accepted and currently being delivered to</h2> <h1 style="color:white">{{location}}
   <br>
-  {{card}}
-<br></h1><h2 style="color:black"> Thank you for shopping with us</h2></center>
+Paying Via: ●●●●&nbsp;●●●●&nbsp;●●●●&nbsp;{{card[11:15]}}
+
+
+</center>
+<br>
+<div> <h1 align="left" style="color:white;">Some fun facts you get to know because you officialy own a FitBit now :</h1></div>
+
+
+<div><h2 align="left" style="color:darkgray;">
+1. Fitbit has 23.2 million active users.
+  <br><br>
+2. Fitbit was inspired by Nintendo Wii
+<br><br>
+3. Apple Used to Sell Fitbit devices
+<br><br>
+4. Fitbit’s Corporate Clients are the Fortune 500 - <a href="https://fortune.com/fortune500/"
+style="color:greenyellow;"> Check them out</a>
+<br><br>
+5. Fitbit is Battle-hardened Through Lawsuits
+
+<br><br>
+
+6. Fitbit lets you challenge your friends
+
+<br><br>
+
+7. Fitbit has Built Up Impressive Awards
+
+<br><br>
+
+8. Fitbit is Unbelievably Popular , it's worn by former president obama , kevin spacey and many more
+<br><br>
+9. Fitbit is owned by Google as of January 2021
+</h2>
+</div>
+
+
+<br></h1><h2 align="middle" style="color:white;"> Thank you for shopping with us</h2>
+<div>
+<h2 align="middle" style="color:green;"><a style="color:greenyellow;" href="{{url_for('design')}}">|<br>\/ <br>--> &nbsp; Back to home &nbsp; <--<br>/\<br>|</a> </h2></div>
+
+
+
